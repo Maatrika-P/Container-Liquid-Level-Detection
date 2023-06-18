@@ -6,9 +6,9 @@ This repository contains code for detecting and analyzing liquid levels in conta
 ## Features :rocket:
 
 - **Level Detection** :mag_right:: Identify the liquid level by marking a reference line on the bottle.
-- 
+  
 - **ClrL** :droplet:: Separate water from the background and draw the water level.
-- 
+  
 - **Colored Liquid** :art:: Detect the liquid level for colored liquids, calculate the percentage of the empty part, and classify the bottle as accepted, overfilled, or underfilled.
 
 
