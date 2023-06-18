@@ -17,7 +17,7 @@ This repository contains code for detecting and analyzing liquid levels in conta
 1. Clone the repository :arrow_down:.
 2. Install the required dependencies :package:.
 3. Import the necessary functions :arrow_up:.
-4. Load an image of a container :frame_photo:.
+4. Load an image of a container 🖼️.
 5. Use the functions to detect and analyze the liquid level :gear:.
 
 
