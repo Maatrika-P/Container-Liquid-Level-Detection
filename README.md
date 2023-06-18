@@ -28,5 +28,5 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 ## Acknowledgements :clap:
 
-- [OpenCV](https://opencv.org/) :camera_with_flash:: Computer vision library.
+- [OpenCV](https://opencv.org/) 📸: Computer vision library.
 
