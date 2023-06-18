@@ -1,4 +1,4 @@
-# Container Liquid Level Detection :beaker:
+# Container Liquid Level Detection 🧪
 
 This repository contains code for detecting and analyzing liquid levels in containers. The goal is to identify variations and errors in the liquid levels and determine if a bottle is accepted or rejected based on being underfilled or overfilled. :heavy_check_mark:
 
