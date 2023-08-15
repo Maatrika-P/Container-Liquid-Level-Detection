@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="Capture.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Include jQuery and Bootstrap scripts and stylesheets -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      integrity="sha512-bfi8KeL+JhHf2n7QwpdyrUV+G7VvgT6goGJ6T9+q3ncU6QlmaCcfHpmJruuU+hdLnRsyw0eYpwDz1PK9XelHUg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+      <script>
+        $(function() {
+          setInterval(function() {
+            $.ajax({
+              url: '/new_rows',
+              type: 'GET',
+              dataType: 'json',
+              success: function(data) {
+                data.forEach(function(list) {
+                  $('#my-table tbody').append(
+                    '<tr><td>' + list[0] + '</td><td>' + list[1] + '</td></tr>'
+                  );
+                });
+              }
+            });
+          }, 500);
+        });
+      </script>
+
+    <script>
+      $(document).ready(function () {
+        $("#myButton").click(function () {
+          $(this).toggleClass("btn-color btn-danger");
+          if ($(this).hasClass("btn-danger")) {
+            $('#image').show()
+            $(this).text("Stop");
+          } else {
+            $('#image').hide()
+            $(this).text("Record");
+          }
+        });
+      });
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Main</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <div class="navbar-brand">
+        <img src = "data:image/jpeg;base64,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" alt = "..." height = 36>
+        <a style="margin-left: 5px" class="navbar-brand" href="./">Project</a>
+      </div>
+    </nav>
+<!-- 
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+      <center><img class = 'output' id = 'image' style = "display:none" src="{{ url_for('video') }}" width="75%" height="75%"/></center> <br>
+        <center><button id="myButton" class="btn btn-color" style="text-align: center; margin-left: 50px;">Record</button></center>
+      <div id="myButton2" style="width: 200px;">
+      <button class="btn btn-secondary" style="margin-left: 10px;">Inspect</button>       
+      <button class="btn btn-secondary" style="margin-left: 10px;">Analysis</button>
+      </div>
+    </div>
+    <br>
+    <br> -->
+
+
+    <table id="my-table">
+      <thead>
+        <tr>
+          <th>Frame</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{% for row in list %}}
+        <tr>
+          <td>{{ row[0] }}</td>
+          <td>{{ row[1] }}</td>
+        </tr>
+        {{% endfor %}}
+      </tbody>
+    </table>
+  </body>
+</html>
